@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iGreen Telecom America — Chip para Brasileiros nos EUA</title>
+<title>iGreen Telecom America — Sem Roaming, Sem Trocar de Número</title>
 
 <!-- Meta Pixel iGreen LP USA -->
 <script>
@@ -22,615 +22,508 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1464927195386336&ev=PageView&noscript=1"/></noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#00C853;--gd:#00a344;--gg:rgba(0,200,83,.14);
+  --bg:#080f08;--bg2:#0c160c;--bg3:#101b10;
+  --sf:#132013;--sf2:#192619;
+  --bd:rgba(0,200,83,.11);--bd2:rgba(255,255,255,.055);
+  --tx:#edf5ed;--mt:#6b8f6b;
+  --r:16px;--rs:10px
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;font-size:16px;line-height:1.6}
 
-  :root {
-    --green: #1FAD6A;
-    --green-dark: #0F7A4A;
-    --green-light: #E8FAF2;
-    --gold: #F5A623;
-    --dark: #0D1117;
-    --dark2: #161C24;
-    --gray: #8A94A6;
-    --white: #FFFFFF;
-    --radius: 14px;
-  }
+/* scrollbar */
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--g);border-radius:2px}
 
-  html { scroll-behavior: smooth; }
+/* HEADER */
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,5vw,3rem);height:66px;background:rgba(8,15,8,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd2)}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo-mark{width:34px;height:34px;background:var(--g);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:20px;height:20px}
+.logo-word{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.4px}
+.logo-word span{color:var(--g)}
+nav{display:flex;align-items:center;gap:24px}
+nav a{font-size:13.5px;font-weight:500;color:var(--mt);text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--tx)}
+.btn-header{background:var(--g);color:#000;font-weight:700;font-size:13px;padding:9px 20px;border-radius:999px;text-decoration:none;transition:all .2s;white-space:nowrap}
+.btn-header:hover{background:var(--gd);transform:translateY(-1px)}
+@media(max-width:680px){nav a:not(.btn-header){display:none}}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--dark);
-    color: var(--white);
-    overflow-x: hidden;
-  }
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:clamp(80px,11vw,130px) clamp(1rem,5vw,3rem) 60px;text-align:center}
+.hero::before{content:'';position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:1000px;height:700px;background:radial-gradient(ellipse at center,rgba(0,200,83,.09) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:1}
 
-  /* ── HEADER ── */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(13,17,23,0.92);
-    backdrop-filter: blur(12px);
-  }
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,83,.07);border:1px solid rgba(0,200,83,.22);border-radius:999px;padding:7px 17px;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.65);margin-bottom:1.8rem}
+.badge-dot{width:6px;height:6px;background:var(--g);border-radius:50%;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-  .logo {
-    display: flex; align-items: center; gap: 10px;
-  }
-  .logo-icon {
-    width: 38px; height: 38px;
-    background: var(--green);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Sora', sans-serif;
-    font-weight: 800; font-size: 16px;
-    color: #fff;
-    letter-spacing: -1px;
-  }
-  .logo-text {
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 18px;
-    color: #fff;
-  }
-  .logo-text span { color: var(--green); }
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--g);margin-bottom:1rem}
 
-  .nav-cta {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-family: 'Sora', sans-serif;
-    font-weight: 600; font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--green-dark); }
+.hero-h1{font-size:clamp(2.5rem,7.5vw,4.4rem);font-weight:900;line-height:1.04;letter-spacing:-2.5px;color:#fff;margin-bottom:1.4rem}
+.hero-h1 .green{color:var(--g)}
+.hero-h1 .ghost{-webkit-text-stroke:1.5px rgba(255,255,255,.25);color:transparent}
 
-  /* ── HERO ── */
-  .hero {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 80px 2rem 60px;
-    text-align: center;
-  }
+.hero-lead{font-size:clamp(.95rem,2.4vw,1.15rem);color:var(--mt);max-width:560px;margin:0 auto 2.6rem;line-height:1.72;font-weight:400}
 
-  .flag-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-size: 13px; color: var(--gray);
-    margin-bottom: 2rem;
-  }
-  .flag-badge span { font-size: 18px; }
+.actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-bottom:2.8rem}
+.btn-cta{display:inline-flex;align-items:center;gap:7px;background:var(--g);color:#000;font-weight:800;font-size:15px;padding:16px 36px;border-radius:999px;text-decoration:none;transition:all .2s;letter-spacing:-.3px}
+.btn-cta:hover{background:var(--gd);transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,200,83,.28)}
+.btn-ghost{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--tx);font-weight:600;font-size:15px;padding:16px 28px;border-radius:999px;border:1px solid var(--bd2);text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.03)}
 
-  .hero h1 {
-    font-family: 'Sora', sans-serif;
-    font-size: clamp(2rem, 6vw, 3.4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-    margin-bottom: 1.2rem;
-  }
-  .hero h1 em { color: var(--green); font-style: normal; }
+.proof{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px}
+.proof-i{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mt)}
+.proof-i::before{content:'✓';color:var(--g);font-weight:700;font-size:12px}
 
-  .hero p {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.65);
-    max-width: 560px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
-  }
+/* TICKER */
+.ticker{border-top:1px solid var(--bd2);border-bottom:1px solid var(--bd2);padding:16px clamp(1rem,5vw,3rem);background:var(--bg2);display:flex;align-items:center;gap:32px;overflow:hidden}
+.tk-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mt);flex-shrink:0}
+.tk-item{font-size:13px;font-weight:600;color:rgba(255,255,255,.32);flex-shrink:0}
+.tk-sep{width:3px;height:3px;border-radius:50%;background:var(--bd);flex-shrink:0}
 
-  .hero-cta {
-    display: inline-block;
-    background: var(--green);
-    color: #fff;
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 1.1rem;
-    padding: 18px 44px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    margin-bottom: 1rem;
-  }
-  .hero-cta:hover { background: var(--green-dark); transform: translateY(-2px); }
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));background:var(--bg2);border-bottom:1px solid var(--bd2)}
+.stat{padding:2rem 1.4rem;border-right:1px solid var(--bd2);text-align:center}
+.stat:last-child{border-right:none}
+.stat-n{display:block;font-size:2.4rem;font-weight:900;color:var(--g);letter-spacing:-2px;line-height:1;margin-bottom:5px}
+.stat-l{font-size:12.5px;color:var(--mt);font-weight:500}
 
-  .hero-sub {
-    font-size: 13px;
-    color: var(--gray);
-    margin-top: 0.6rem;
-  }
+/* SECTION */
+.sec{padding:clamp(56px,8vw,90px) clamp(1rem,5vw,3rem)}
+.sec-alt{background:var(--bg2);border-top:1px solid var(--bd2);border-bottom:1px solid var(--bd2)}
+.sec-in{max-width:980px;margin:0 auto}
+.sec-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--g);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.8rem}
+.sec-tag::before{content:'';width:14px;height:2px;background:var(--g);border-radius:1px}
+.sec-h{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-1.2px;line-height:1.1;color:#fff;margin-bottom:.9rem}
+.sec-h .green{color:var(--g)}
+.sec-p{font-size:.98rem;color:var(--mt);max-width:500px;margin-bottom:2.8rem;line-height:1.7}
 
-  .phones-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-  }
+/* HIGHLIGHT TRIO */
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--bd2);border-radius:var(--r);overflow:hidden}
+.hl-card{background:var(--sf);padding:2.2rem 1.8rem;display:flex;flex-direction:column;gap:.8rem}
+.hl-icon{font-size:2.2rem;margin-bottom:.2rem}
+.hl-title{font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:-.4px;line-height:1.2}
+.hl-desc{font-size:.9rem;color:var(--mt);line-height:1.65}
+.hl-pill{display:inline-block;background:rgba(0,200,83,.1);color:var(--g);font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;align-self:flex-start;margin-top:.4rem}
 
-  .carrier-logo {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 10px 18px;
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 14px;
-    color: rgba(255,255,255,0.55);
-  }
+/* FEATURES */
+.ft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.ft-card{background:var(--sf);border:1px solid var(--bd2);border-radius:var(--rs);padding:1.4rem;transition:border-color .2s,background .2s}
+.ft-card:hover{border-color:rgba(0,200,83,.28);background:var(--sf2)}
+.ft-ic{width:42px;height:42px;background:rgba(0,200,83,.08);border:1px solid rgba(0,200,83,.14);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:.9rem}
+.ft-title{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:.35rem;letter-spacing:-.2px}
+.ft-desc{font-size:13px;color:var(--mt);line-height:1.6}
 
-  /* ── STATS STRIP ── */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1px;
-    background: rgba(255,255,255,0.07);
-    border-top: 1px solid rgba(255,255,255,0.07);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    margin: 0;
-  }
-  .stat {
-    background: var(--dark);
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-  .stat-number {
-    font-family: 'Sora', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--green);
-    display: block;
-  }
-  .stat-label {
-    font-size: 13px;
-    color: var(--gray);
-    margin-top: 4px;
-  }
+/* PLANOS */
+.pl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;align-items:start}
+.pl-card{background:var(--sf);border:1px solid var(--bd2);border-radius:var(--r);padding:1.8rem 1.5rem;position:relative;transition:transform .2s}
+.pl-card.pop{border-color:var(--g);background:linear-gradient(150deg,rgba(0,200,83,.07) 0%,var(--sf) 55%);transform:scale(1.025)}
+.pl-card:hover:not(.pop){transform:translateY(-4px)}
+.pl-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--g);color:#000;font-size:11px;font-weight:800;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.pl-name{font-size:11px;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase;margin-bottom:.7rem}
+.pl-gb{font-size:3rem;font-weight:900;color:#fff;letter-spacing:-3px;line-height:1;margin-bottom:.15rem}
+.pl-gb sub{font-size:.95rem;letter-spacing:0;font-weight:500;color:var(--mt);vertical-align:baseline}
+.pl-price{font-size:13.5px;font-weight:600;color:var(--g);margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--bd2)}
+.pl-ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pl-ul li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.45;padding:3px 0}
+.pl-ul li::before{content:'';display:block;flex-shrink:0;width:15px;height:15px;margin-top:1px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7' stroke='%2300C853' stroke-opacity='.3' fill='none'/%3E%3Cpath d='M4.5 7.5l2 2 4-4' stroke='%2300C853' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/contain}
+.pl-btn{display:block;text-align:center;margin-top:1.5rem;padding:12px;border-radius:9px;font-weight:700;font-size:13.5px;text-decoration:none;transition:all .2s}
+.pl-card.pop .pl-btn{background:var(--g);color:#000}
+.pl-card.pop .pl-btn:hover{background:var(--gd)}
+.pl-card:not(.pop) .pl-btn{border:1px solid rgba(255,255,255,.11);color:var(--tx)}
+.pl-card:not(.pop) .pl-btn:hover{border-color:var(--g);color:var(--g);background:rgba(0,200,83,.04)}
 
-  /* ── SECTION GENERIC ── */
-  section { padding: 72px 2rem; }
-  .container { max-width: 900px; margin: 0 auto; }
+/* STEPS */
+.st-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;counter-reset:steps}
+.st-card{background:var(--sf);border:1px solid var(--bd2);border-radius:var(--rs);padding:1.5rem;counter-increment:steps;position:relative;overflow:hidden}
+.st-card::after{content:counter(steps,decimal-leading-zero);position:absolute;bottom:-6px;right:10px;font-size:4.5rem;font-weight:900;color:var(--g);opacity:.04;line-height:1;letter-spacing:-3px;pointer-events:none}
+.st-ic{width:36px;height:36px;background:rgba(0,200,83,.09);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:.9rem}
+.st-title{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:.35rem;letter-spacing:-.2px}
+.st-desc{font-size:13px;color:var(--mt);line-height:1.6}
 
-  .section-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--green);
-    margin-bottom: 0.7rem;
-  }
-  .section-title {
-    font-family: 'Sora', sans-serif;
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
-  }
-  .section-desc {
-    color: rgba(255,255,255,0.55);
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 560px;
-    margin-bottom: 2.5rem;
-  }
+/* REVIEWS */
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.rv-card{background:var(--sf);border:1px solid var(--bd2);border-radius:var(--rs);padding:1.5rem;transition:border-color .2s}
+.rv-card:hover{border-color:rgba(0,200,83,.2)}
+.rv-stars{color:#f5a623;font-size:12.5px;letter-spacing:1px;margin-bottom:.7rem}
+.rv-text{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:1.1rem;font-style:italic}
+.rv-name{font-size:13.5px;font-weight:700;color:#fff}
+.rv-city{font-size:12px;color:var(--mt);margin-top:2px}
 
-  /* ── FEATURES ── */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-  .feature-card {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    transition: border-color 0.2s;
-  }
-  .feature-card:hover { border-color: var(--green); }
-  .feature-icon {
-    width: 42px; height: 42px;
-    background: rgba(31,173,106,0.12);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-    margin-bottom: 1rem;
-  }
-  .feature-card h3 {
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 1rem;
-    margin-bottom: 0.4rem;
-  }
-  .feature-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:7px}
+.faq-item{background:var(--sf);border:1px solid var(--bd2);border-radius:var(--rs);overflow:hidden}
+.faq-q{padding:1.15rem 1.3rem;font-size:14.5px;font-weight:600;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;user-select:none;list-style:none;letter-spacing:-.2px}
+.faq-q::after{content:'+';font-size:22px;font-weight:200;color:var(--g);flex-shrink:0;transition:transform .2s;line-height:1}
+details[open] .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 1.3rem 1.1rem;padding-top:1rem;font-size:13.5px;color:var(--mt);line-height:1.7;border-top:1px solid var(--bd2)}
 
-  /* ── PLANS ── */
-  .plans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
-  .plan-card {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: var(--radius);
-    padding: 1.75rem 1.5rem;
-    position: relative;
-    transition: transform 0.2s;
-  }
-  .plan-card:hover { transform: translateY(-4px); }
-  .plan-card.featured {
-    border-color: var(--green);
-    background: linear-gradient(135deg, rgba(31,173,106,0.08) 0%, var(--dark2) 100%);
-  }
-  .plan-badge {
-    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--green);
-    color: #fff;
-    font-size: 11px; font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 999px;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-  }
-  .plan-gb {
-    font-family: 'Sora', sans-serif;
-    font-size: 2.6rem; font-weight: 800;
-    color: var(--white);
-    letter-spacing: -2px;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
-  .plan-gb span { font-size: 1.1rem; color: var(--gray); font-weight: 400; }
-  .plan-price {
-    font-size: 1rem;
-    color: var(--green);
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-  }
-  .plan-features { list-style: none; }
-  .plan-features li {
-    font-size: 13px; color: var(--gray);
-    padding: 5px 0;
-    display: flex; align-items: center; gap: 7px;
-  }
-  .plan-features li::before {
-    content: '✓';
-    color: var(--green);
-    font-weight: 700;
-    font-size: 12px;
-  }
-  .plan-cta {
-    display: block;
-    text-align: center;
-    margin-top: 1.4rem;
-    padding: 12px;
-    border-radius: 8px;
-    font-family: 'Sora', sans-serif;
-    font-weight: 600; font-size: 14px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .plan-card.featured .plan-cta {
-    background: var(--green); color: #fff;
-  }
-  .plan-card:not(.featured) .plan-cta {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.15);
-    color: #fff;
-  }
-  .plan-card:not(.featured) .plan-cta:hover {
-    border-color: var(--green); color: var(--green);
-  }
+/* CTA FINAL */
+.cta-sec{padding:clamp(70px,10vw,110px) clamp(1rem,5vw,3rem);text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--bd2)}
+.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,200,83,.07) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:600px;margin:0 auto;position:relative}
+.cta-h{font-size:clamp(2rem,5.5vw,3.1rem);font-weight:900;letter-spacing:-1.5px;line-height:1.07;color:#fff;margin-bottom:.9rem}
+.cta-h .green{color:var(--g)}
+.cta-p{font-size:.98rem;color:var(--mt);margin-bottom:2.2rem;line-height:1.65}
 
-  /* ── HOW IT WORKS ── */
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    counter-reset: step;
-  }
-  .step {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    counter-increment: step;
-    position: relative;
-    overflow: hidden;
-  }
-  .step::before {
-    content: counter(step, decimal-leading-zero);
-    position: absolute; top: 1rem; right: 1.2rem;
-    font-family: 'Sora', sans-serif;
-    font-size: 3rem; font-weight: 800;
-    color: rgba(31,173,106,0.08);
-    line-height: 1;
-  }
-  .step h3 {
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 1rem;
-    margin-bottom: 0.4rem;
-  }
-  .step p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+/* FOOTER */
+footer{padding:1.8rem clamp(1rem,5vw,3rem);border-top:1px solid var(--bd2);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.ft-logo{display:flex;align-items:center;gap:7px}
+.ft-dot{width:7px;height:7px;background:var(--g);border-radius:50%}
+.ft-name{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.4)}
+.ft-copy{font-size:11.5px;color:rgba(255,255,255,.22)}
+.ft-copy a{color:var(--g);text-decoration:none}
 
-  /* ── SOCIAL PROOF ── */
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-  .review-card {
-    background: var(--dark2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: var(--radius);
-    padding: 1.4rem;
-  }
-  .review-stars { color: var(--gold); font-size: 14px; margin-bottom: 0.8rem; }
-  .review-text { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1rem; font-style: italic; }
-  .review-author { font-size: 13px; font-weight: 600; color: #fff; }
-  .review-city { font-size: 12px; color: var(--gray); }
-
-  /* ── CTA FINAL ── */
-  .cta-final {
-    text-align: center;
-    padding: 80px 2rem;
-    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(31,173,106,0.12) 0%, transparent 70%);
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .cta-final h2 {
-    font-family: 'Sora', sans-serif;
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
-  }
-  .cta-final h2 em { color: var(--green); font-style: normal; }
-  .cta-final p { color: var(--gray); font-size: 1rem; margin-bottom: 2rem; }
-
-  .big-cta {
-    display: inline-block;
-    background: var(--green);
-    color: #fff;
-    font-family: 'Sora', sans-serif;
-    font-weight: 700; font-size: 1.15rem;
-    padding: 20px 52px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .big-cta:hover { background: var(--green-dark); transform: translateY(-2px); }
-
-  /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    font-size: 13px;
-    color: var(--gray);
-  }
-
-  @media (max-width: 640px) {
-    header { padding: 1rem; }
-    .hero { padding: 52px 1rem 40px; }
-    section { padding: 48px 1rem; }
-  }
+@media(max-width:600px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:none;border-bottom:1px solid var(--bd2)}
+  .pl-card.pop{transform:none}
+  .hero-h1{letter-spacing:-1.2px}
+}
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="logo">
-    <div class="logo-icon">iG</div>
-    <div class="logo-text">iGreen <span>America</span></div>
-  </div>
-  <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="nav-cta" onclick="fbq('track','InitiateCheckout')">Assinar agora</a>
+  <a href="#" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 10a6 6 0 1 1 8 5.66" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="10" cy="10" r="2.5" fill="#000"/>
+      </svg>
+    </div>
+    <span class="logo-word">iGreen <span>America</span></span>
+  </a>
+  <nav>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#planos">Planos</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="btn-header" onclick="fbq('track','InitiateCheckout')">Ativar agora →</a>
+  </nav>
 </header>
 
 <!-- HERO -->
-<section style="padding: 0;">
-  <div class="hero">
-    <div class="flag-badge">
-      <span>🇧🇷</span> Para brasileiros que moram nos EUA <span>🇺🇸</span>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      iGreen Telecom chegou nos EUA 🇺🇸
     </div>
-    <h1>Chip americano com<br><em>cashback em reais</em><br>todo mês</h1>
-    <p>Internet no seu celular nos EUA, sem fidelidade, sem taxa de adesão — e ainda ganha dinheiro de volta todo mês.</p>
-    <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="hero-cta" onclick="fbq('track','InitiateCheckout')">
-      🚀 Quero meu chip iGreen
-    </a>
-    <div class="hero-sub">Ativação 100% online · Entrega em todo o país</div>
+    <div class="kicker">🇧🇷 Para brasileiros nos EUA</div>
+    <h1 class="hero-h1">
+      Seu número brasileiro<br>
+      <span class="green">funciona nos EUA.</span><br>
+      <span class="ghost">Sem roaming. Sem trocar chip.</span>
+    </h1>
+    <p class="hero-lead">
+      A iGreen Telecom opera nos Estados Unidos. Você usa o mesmo número, paga um plano justo e ainda acumula cashback — tudo em português, sem surpresas na fatura.
+    </p>
+    <div class="actions">
+      <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="btn-cta" onclick="fbq('track','InitiateCheckout')">
+        Ativar iGreen America →
+      </a>
+      <a href="#planos" class="btn-ghost">Ver planos</a>
+    </div>
+    <div class="proof">
+      <span class="proof-i">Sem fidelidade</span>
+      <span class="proof-i">Ativação online em minutos</span>
+      <span class="proof-i">+600 mil clientes iGreen</span>
+    </div>
+  </div>
+</div>
 
-    <div class="phones-row">
-      <div class="carrier-logo">AT&T Network</div>
-      <div class="carrier-logo">T-Mobile Network</div>
-      <div style="font-size:13px;color:var(--gray);">cobertura em todo o território americano</div>
+<!-- TICKER -->
+<div class="ticker">
+  <span class="tk-label">Redes cobertas</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">AT&T Network</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">T-Mobile Network</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">5G nos EUA</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">50 estados</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">eSIM disponível</span>
+  <span class="tk-sep"></span>
+  <span class="tk-item">Cobertura nacional</span>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <span class="stat-n">600k+</span>
+    <span class="stat-l">clientes iGreen ativos</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">$0</span>
+    <span class="stat-l">taxa de roaming</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">5G</span>
+    <span class="stat-l">cobertura EUA</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">0</span>
+    <span class="stat-l">multa de cancelamento</span>
+  </div>
+</div>
+
+<!-- DESTAQUE PRINCIPAL -->
+<section class="sec" id="beneficios">
+  <div class="sec-in">
+    <div class="sec-tag">O grande diferencial</div>
+    <h2 class="sec-h">Acabou o drama de<br><span class="green">viagem para os EUA.</span></h2>
+    <p class="sec-p">Nada de chip novo a cada viagem, nada de número temporário, nada de conta de roaming surpresa no cartão.</p>
+
+    <div class="hl-grid">
+      <div class="hl-card">
+        <div class="hl-icon">📵</div>
+        <div class="hl-title">Sem roaming.<br>Para sempre.</div>
+        <div class="hl-desc">Chegou nos EUA, seu celular já está conectado. Sem taxas absurdas de roaming internacional. Você paga o plano normal iGreen — só isso.</div>
+        <span class="hl-pill">Economia real</span>
+      </div>
+      <div class="hl-card">
+        <div class="hl-icon">📱</div>
+        <div class="hl-title">Mesmo número.<br>Brasil e EUA.</div>
+        <div class="hl-desc">Não precisa trocar de chip, não precisa avisar ninguém do número novo. Seu número brasileiro — WhatsApp, ligações, tudo — funciona normalmente.</div>
+        <span class="hl-pill">Sem complicação</span>
+      </div>
+      <div class="hl-card">
+        <div class="hl-icon">🇧🇷</div>
+        <div class="hl-title">Suporte 100%<br>em português.</div>
+        <div class="hl-desc">Problema? Dúvida? Fala em português com nossa equipe. Sem precisar se virar em inglês para resolver nada do seu plano.</div>
+        <span class="hl-pill">Feito para você</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat"><span class="stat-number">+50k</span><div class="stat-label">brasileiros conectados</div></div>
-  <div class="stat"><span class="stat-number">5G</span><div class="stat-label">cobertura disponível</div></div>
-  <div class="stat"><span class="stat-number">R$</span><div class="stat-label">cashback todo mês</div></div>
-  <div class="stat"><span class="stat-number">0</span><div class="stat-label">taxa de cancelamento</div></div>
-</div>
+<!-- FEATURES -->
+<section class="sec sec-alt">
+  <div class="sec-in">
+    <div class="sec-tag">Tudo incluso</div>
+    <h2 class="sec-h">A conexão de quem<br><span class="green">faz acontecer.</span></h2>
+    <p class="sec-p">Telefonia inteligente, flexível e que trabalha a seu favor. Sem fidelidade, com internet acumulativa e cobertura nacional.</p>
 
-<!-- DIFERENCIAIS -->
-<section>
-  <div class="container">
-    <div class="section-label">Por que iGreen</div>
-    <h2 class="section-title">Tudo que você precisava<br>num chip só</h2>
-    <p class="section-desc">Feito para brasileiros que vivem nos EUA e querem praticidade, preço justo e ainda ganhar dinheiro.</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <h3>Cashback em reais</h3>
-        <p>Receba parte da sua mensalidade de volta direto na sua conta, todo mês.</p>
+    <div class="ft-grid">
+      <div class="ft-card">
+        <div class="ft-ic">💰</div>
+        <div class="ft-title">Cashback todo mês</div>
+        <div class="ft-desc">Receba parte do valor do plano de volta em reais todo mês. Dinheiro real, não pontos nem milhas.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📶</div>
-        <h3>Rede AT&T e T-Mobile</h3>
-        <p>Acesse as melhores redes dos EUA com cobertura de costa a costa.</p>
+      <div class="ft-card">
+        <div class="ft-ic">📶</div>
+        <div class="ft-title">Rede AT&T + T-Mobile</div>
+        <div class="ft-desc">Acesse as melhores redes dos EUA. 4G/LTE e 5G com cobertura de costa a costa.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔓</div>
-        <h3>Sem fidelidade</h3>
-        <p>Cancele quando quiser, sem multa e sem burocracia. Sem pegadinha.</p>
+      <div class="ft-card">
+        <div class="ft-ic">🔓</div>
+        <div class="ft-title">Sem fidelidade</div>
+        <div class="ft-desc">Cancele quando quiser, sem multa e sem burocracia. Total liberdade, sem pegadinha.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Ativação online</h3>
-        <p>Tudo pelo celular, em português. Suporte em PT-BR quando precisar.</p>
+      <div class="ft-card">
+        <div class="ft-ic">✈️</div>
+        <div class="ft-title">Ideal pra quem viaja</div>
+        <div class="ft-desc">Mora no Brasil e vai para os EUA com frequência? Perfeito. Seu chip funciona nos dois países.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌎</div>
-        <h3>Ligue pro Brasil</h3>
-        <p>Inclui chamadas e SMS internacionais para o Brasil em vários planos.</p>
+      <div class="ft-card">
+        <div class="ft-ic">📞</div>
+        <div class="ft-title">Ligue pro Brasil</div>
+        <div class="ft-desc">Inclui chamadas e SMS internacionais para o Brasil em vários planos. Família sempre próxima.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤝</div>
-        <h3>Indique e ganhe</h3>
-        <p>Indique amigos e aumente ainda mais o seu cashback mensal.</p>
+      <div class="ft-card">
+        <div class="ft-ic">🤝</div>
+        <div class="ft-title">Indique e ganhe mais</div>
+        <div class="ft-desc">Indique amigos brasileiros nos EUA e aumente ainda mais o seu cashback mensal.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PLANOS -->
-<section style="background: var(--dark2); border-top:1px solid rgba(255,255,255,0.05); border-bottom:1px solid rgba(255,255,255,0.05);">
-  <div class="container">
-    <div class="section-label">Planos</div>
-    <h2 class="section-title">Escolha o seu plano</h2>
-    <p class="section-desc">Todos com cashback e sem fidelidade. Mude de plano quando quiser.</p>
+<section class="sec" id="planos">
+  <div class="sec-in">
+    <div class="sec-tag">Planos</div>
+    <h2 class="sec-h">Escolha o seu plano.<br><span class="green">Todos com cashback.</span></h2>
+    <p class="sec-p">Sem fidelidade. Mude ou cancele quando quiser.</p>
 
-    <div class="plans-grid">
-      <div class="plan-card">
-        <div class="plan-gb">10<span>GB</span></div>
-        <div class="plan-price">a partir de $15/mês</div>
-        <ul class="plan-features">
-          <li>Dados 4G/LTE</li>
-          <li>SMS e Ligações ilimitadas</li>
+    <div class="pl-grid">
+      <div class="pl-card">
+        <div class="pl-name">Essencial</div>
+        <div class="pl-gb">10<sub>GB</sub></div>
+        <div class="pl-price">a partir de $15/mês</div>
+        <ul class="pl-ul">
+          <li>Internet 4G/LTE</li>
+          <li>Ligações e SMS ilimitados</li>
           <li>Cashback mensal</li>
           <li>Suporte em português</li>
+          <li>Sem fidelidade</li>
         </ul>
-        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="plan-cta" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
+        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="pl-btn" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
       </div>
 
-      <div class="plan-card featured">
-        <div class="plan-badge">⭐ Mais popular</div>
-        <div class="plan-gb">25<span>GB</span></div>
-        <div class="plan-price">a partir de $25/mês</div>
-        <ul class="plan-features">
-          <li>Dados 4G/LTE + 5G</li>
-          <li>SMS e Ligações ilimitadas</li>
-          <li>Ligações pro Brasil</li>
+      <div class="pl-card pop">
+        <div class="pl-badge">⭐ Mais popular</div>
+        <div class="pl-name">Plus</div>
+        <div class="pl-gb">25<sub>GB</sub></div>
+        <div class="pl-price">a partir de $25/mês</div>
+        <ul class="pl-ul">
+          <li>Internet 4G/LTE + 5G</li>
+          <li>Ligações e SMS ilimitados</li>
+          <li>Ligações pro Brasil incluídas</li>
           <li>Cashback mensal maior</li>
           <li>Suporte em português</li>
         </ul>
-        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="plan-cta" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
+        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="pl-btn" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
       </div>
 
-      <div class="plan-card">
-        <div class="plan-gb">∞<span> ilimitado</span></div>
-        <div class="plan-price">a partir de $35/mês</div>
-        <ul class="plan-features">
-          <li>Dados 5G ilimitados</li>
+      <div class="pl-card">
+        <div class="pl-name">Ilimitado</div>
+        <div class="pl-gb">∞</div>
+        <div class="pl-price">a partir de $35/mês</div>
+        <ul class="pl-ul">
+          <li>Internet 5G ilimitada</li>
           <li>Tudo ilimitado</li>
           <li>Ligações pro Brasil</li>
-          <li>Maior cashback do portfólio</li>
+          <li>Maior cashback da linha</li>
           <li>Suporte VIP</li>
         </ul>
-        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="plan-cta" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
+        <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="pl-btn" onclick="fbq('track','InitiateCheckout')">Escolher plano</a>
       </div>
     </div>
-
-    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:1.5rem;">* Valores e planos sujeitos a disponibilidade. Consulte o checkout para detalhes completos.</p>
+    <p style="text-align:center;font-size:12px;color:var(--mt);margin-top:1.1rem;">* Valores sujeitos a disponibilidade. Consulte o checkout para condições e valores exatos.</p>
   </div>
 </section>
 
 <!-- COMO FUNCIONA -->
-<section>
-  <div class="container">
-    <div class="section-label">Passo a passo</div>
-    <h2 class="section-title">Como funciona</h2>
-    <p class="section-desc">Conectado em minutos, sem precisar ir a nenhuma loja.</p>
+<section class="sec sec-alt">
+  <div class="sec-in">
+    <div class="sec-tag">Passo a passo</div>
+    <h2 class="sec-h">Conectado em minutos.<br><span class="green">Sem sair de casa.</span></h2>
+    <p class="sec-p">Ativação 100% online, tudo em português.</p>
 
-    <div class="steps">
-      <div class="step">
-        <h3>Escolha o plano</h3>
-        <p>Acesse o checkout, selecione o plano ideal pro seu uso e finalize o pedido online.</p>
+    <div class="st-grid">
+      <div class="st-card">
+        <div class="st-ic">📋</div>
+        <div class="st-title">Escolha o plano</div>
+        <div class="st-desc">Acesse o checkout, selecione o plano ideal pro seu uso e finalize o pedido online.</div>
       </div>
-      <div class="step">
-        <h3>Receba o chip</h3>
-        <p>Seu SIM Card chega no seu endereço nos EUA. Também disponível como eSIM.</p>
+      <div class="st-card">
+        <div class="st-ic">📦</div>
+        <div class="st-title">Receba o chip</div>
+        <div class="st-desc">Seu SIM Card chega no endereço informado nos EUA. Também disponível como eSIM instantâneo.</div>
       </div>
-      <div class="step">
-        <h3>Ative pelo app</h3>
-        <p>Ativação simples pelo app ou site, tudo em português. Em minutos você já está online.</p>
+      <div class="st-card">
+        <div class="st-ic">⚡</div>
+        <div class="st-title">Ative em minutos</div>
+        <div class="st-desc">Ativação simples pelo app ou site, tudo em português. Em poucos minutos você já está online.</div>
       </div>
-      <div class="step">
-        <h3>Receba cashback</h3>
-        <p>Todo mês você acumula cashback em reais. Disponível para saque ou reinvestimento.</p>
+      <div class="st-card">
+        <div class="st-ic">💸</div>
+        <div class="st-title">Receba cashback</div>
+        <div class="st-desc">Todo mês você acumula cashback em reais — só por usar seu plano. Disponível para saque.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- DEPOIMENTOS -->
-<section style="background: var(--dark2); border-top:1px solid rgba(255,255,255,0.05); border-bottom:1px solid rgba(255,255,255,0.05);">
-  <div class="container">
-    <div class="section-label">Depoimentos</div>
-    <h2 class="section-title">O que dizem os brasileiros<br>que já usam iGreen</h2>
+<section class="sec">
+  <div class="sec-in">
+    <div class="sec-tag">Depoimentos</div>
+    <h2 class="sec-h">Brasileiros que já<br><span class="green">abandonaram o roaming.</span></h2>
 
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Melhor chip que tive nos EUA. Além de funcionar muito bem, ainda recebo cashback todo mês. Não troco por nada."</p>
-        <div class="review-author">Marcela R.</div>
-        <div class="review-city">Miami, FL</div>
+    <div class="rv-grid">
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Viajo para os EUA todo mês a trabalho. Antes pagava uma fortuna em roaming. Com iGreen pago um plano fixo e ainda recebo cashback. Melhor troca que já fiz."</p>
+        <div class="rv-name">Carlos M.</div>
+        <div class="rv-city">São Paulo → New York</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Atendimento em português foi um diferencial enorme. Resolvi tudo em menos de 10 minutos."</p>
-        <div class="review-author">Thiago M.</div>
-        <div class="review-city">Orlando, FL</div>
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Moro em Orlando e nunca mais precisei me preocupar com número temporário. Minha família no Brasil liga pro mesmo número de sempre. Suporte em português é diferencial enorme."</p>
+        <div class="rv-name">Marcela R.</div>
+        <div class="rv-city">Orlando, FL</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Uso para ligar pro Brasil e a qualidade é ótima. O cashback já pagou quase uma mensalidade!"</p>
-        <div class="review-author">Fernanda L.</div>
-        <div class="review-city">Boston, MA</div>
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Fui trabalhar nos EUA por 6 meses e o iGreen foi perfeito. Mesmo número, sem roaming, e ainda voltei com cashback acumulado. Recomendo pra todo brasileiro."</p>
+        <div class="rv-name">Rodrigo T.</div>
+        <div class="rv-city">Boston, MA</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="sec sec-alt" id="faq">
+  <div class="sec-in">
+    <div class="sec-tag">Dúvidas frequentes</div>
+    <h2 class="sec-h">Perguntas <span class="green">frequentes.</span></h2>
+    <p class="sec-p" style="margin-bottom:2rem">Tudo que você precisa saber antes de ativar.</p>
+
+    <div class="faq">
+      <details class="faq-item">
+        <summary class="faq-q">Preciso trocar meu número brasileiro?</summary>
+        <p class="faq-a">Não. Com a iGreen você mantém o seu número brasileiro normalmente. Seu WhatsApp continua funcionando, seus contatos continuam te encontrando — sem nenhuma mudança.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Vou pagar roaming?</summary>
+        <p class="faq-a">Não. A iGreen Telecom opera nos EUA com planos locais. Você paga apenas a mensalidade do seu plano, sem taxas de roaming internacional surpresa na fatura.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Funciona para quem mora no Brasil e viaja para os EUA?</summary>
+        <p class="faq-a">Sim, perfeitamente. O chip iGreen funciona tanto no Brasil quanto nos EUA. Ideal para quem viaja com frequência a trabalho ou para visitar família.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Como funciona o cashback?</summary>
+        <p class="faq-a">Todo mês você acumula cashback em reais pelo valor do seu plano. O saldo fica disponível para saque ou para abater nas próximas mensalidades.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Tem fidelidade ou multa de cancelamento?</summary>
+        <p class="faq-a">Zero. Você pode cancelar quando quiser, sem multa e sem burocracia. A iGreen não prende clientes — a gente quer que você fique porque vale a pena.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">O atendimento é em português?</summary>
+        <p class="faq-a">Sim, 100%. Nossa equipe de suporte atende em português. Sem precisar se virar em inglês para resolver nada.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
-<div class="cta-final">
-  <h2>Pronto para se conectar<br>e ainda <em>ganhar dinheiro</em>?</h2>
-  <p>Ative hoje. Sem fidelidade. Sem taxa de adesão.</p>
-  <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="big-cta" onclick="fbq('track','InitiateCheckout')">
-    🚀 Assinar iGreen America agora
-  </a>
-  <p style="margin-top:1.2rem;font-size:12px;color:var(--gray);">Chip entregue em todo o território dos EUA</p>
+<div class="cta-sec">
+  <div class="cta-inner">
+    <h2 class="cta-h">Próxima viagem para os EUA?<br><span class="green">Já era o roaming.</span></h2>
+    <p class="cta-p">Mesmo número. Sem trocar chip. Sem taxas absurdas. E ainda recebendo cashback todo mês.</p>
+    <a href="https://telecom.igreenenergy.com.br?id=58445&referral=207173" target="_blank" rel="noopener" class="btn-cta" style="font-size:16px;padding:18px 44px" onclick="fbq('track','InitiateCheckout')">
+      Ativar iGreen America agora →
+    </a>
+    <p style="margin-top:1.1rem;font-size:12px;color:var(--mt)">Ativação online · Entrega nos EUA · Suporte em português</p>
+  </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 iGreen Telecom · Franqueado: Nivaldo · Nova Era, MG<br>
-  <a href="mailto:solarprimenovaera@gmail.com" style="color:var(--green);text-decoration:none;">solarprimenovaera@gmail.com</a> · (31) 99285-3080</p>
+  <div class="ft-logo">
+    <div class="ft-dot"></div>
+    <span class="ft-name">iGreen Telecom America</span>
+  </div>
+  <div class="ft-copy">
+    © 2025 iGreen Telecom · Franqueado Nivaldo · Nova Era, MG ·
+    <a href="mailto:solarprimenovaera@gmail.com">solarprimenovaera@gmail.com</a> · (31) 99285-3080
+  </div>
 </footer>
 
 </body>
